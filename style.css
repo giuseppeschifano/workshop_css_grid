@@ -1,0 +1,75 @@
+
+ /* Google font*/
+ 
+ @import url('https://fonts.googleapis.com/css?family=Six+Caps');
+
+ @import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', 'Arial', 'sans-serif',  'serif';
+  color: black;
+  background-color: white; 
+  line-height: 1.6;
+  margin-left: 10rem;
+}
+
+.container{
+  width: 75vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 50px auto 50px;
+  grid-gap: 5px;
+}
+
+h2 {
+  text-align: center;
+  font-weight: bolder;
+}
+
+.header, .sidebar, .one, .two, .three, .footer {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.header {
+  background-color: lightblue;
+  grid-column: 1 / 5;
+}
+
+.sidebar {
+background-color: lightgreen;
+}
+
+.one, .two, .three {
+  background-color: lightgrey;
+}
+
+.footer {
+  background-color: lightslategray;
+  grid-column: 1 / 5;
+}
+
+@media (max-width: 769px) {
+  .container {
+    max-width: 75vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-gap: 5px;
+  }
+  .header, .sidebar, .one, .two, .three, .footer {
+    grid-column: 1 / 5;
+   }
+
+}
+
+
